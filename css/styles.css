@@ -1,0 +1,48 @@
+/* = MoodMove color palette 
+   #17203A  dark indigo   -> text
+   #F2F4F7  light gray     -> page background
+   #FF3D6E  pink           -> accent (logo, links, titles)
+= */
+
+body {
+  background-color: #F2F4F7;
+  color: #17203A;
+  font-family: Arial, sans-serif;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+p {
+  text-align: justify;
+}
+.photo {
+  width: 200px;
+  margin: 5px;
+}
+.logo {
+  color: #FF3D6E;
+  font-size: 40px;
+  text-align: center;
+}
+h2 {
+  color: #FF3D6E;
+  text-align: center;
+}
+a {
+  color: #17203A;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  color: #FF3D6E;
+}
+.menu {
+  text-align: center;
+}
+.logo {
+  color: #FF3D6E;
+  font-size: 40px;
+  text-align: center;
+}
+.gallery {
+  text-align: center;
+}
