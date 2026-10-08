@@ -14,7 +14,6 @@ function retrieve_theme() {
     theme = localStorage.getItem('website_theme');
   } catch (e) {}
 
-  // First visit: follow the device's setting
   if (theme === null) {
     const prefers_dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     theme = prefers_dark ? 'dark_mode' : 'default';
