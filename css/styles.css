@@ -1,12 +1,30 @@
-/* = MoodMove color palette 
-   #17203A  dark indigo   -> text
-   #F2F4F7  light gray     -> page background
-   #FF3D6E  pink           -> accent (logo, links, titles)
+/* = MoodMove color palette
+   #17203A  dark indigo   -> text (light mode) / background (dark mode)
+   #F2F4F7  light gray    -> page background (light mode) / text (dark mode)
+   #FF3D6E  pink          -> accent (logo, links on hover, titles)
 = */
-
+ 
+/* Light theme (default) */
+:root {
+  --body-bg: #F2F4F7;
+  --text-color: #17203A;
+  --accent: #FF3D6E;
+  --link-color: #17203A;
+  --photo-filter: none;
+}
+ 
+/* Dark theme: toggled by adding the "dark_mode" class to <body> */
+body.dark_mode {
+  --body-bg: #17203A;
+  --text-color: #F2F4F7;
+  --accent: #FF3D6E;
+  --link-color: #F2F4F7;
+  --photo-filter: brightness(0.9);
+}
+ 
 body {
-  background-color: #F2F4F7;
-  color: #17203A;
+  background-color: var(--body-bg);
+  color: var(--text-color);
   font-family: Arial, sans-serif;
   margin-left: 15%;
   margin-right: 15%;
@@ -17,32 +35,48 @@ p {
 .photo {
   width: 300px;
   margin: 5px;
+  filter: var(--photo-filter);
 }
 .logo {
-  color: #FF3D6E;
+  color: var(--accent);
   font-size: 40px;
   text-align: center;
 }
 h2 {
-  color: #FF3D6E;
+  color: var(--accent);
   text-align: center;
 }
 a {
-  color: #17203A;
+  color: var(--link-color);
   text-decoration: none;
   font-weight: bold;
 }
 a:hover {
-  color: #FF3D6E;
+  color: var(--accent);
 }
 .menu {
-  text-align: center;
-}
-.logo {
-  color: #FF3D6E;
-  font-size: 40px;
   text-align: center;
 }
 .gallery {
   text-align: center;
 }
+ 
+/* Theme toggle button */
+.theme-toggle-wrap {
+  text-align: center;
+}
+#theme_toggler {
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--accent);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+#theme_toggler:hover {
+  background: var(--accent);
+  color: #F2F4F7;
+}
+ 
