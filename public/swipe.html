@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Swipe · MoodMove</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+  <!-- Logo -->
+  <h1 class="logo">MoodMove</h1>
+
+  <!-- Navigation menu -->
+  <p class="menu">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="dashboard">Dashboard</a> |
+    <a href="logout">Log out</a>
+  </p>
+
+  <!-- Dark mode toggle -->
+  <p class="theme-toggle-wrap">
+    <button id="theme_toggler" type="button">🌙 Dark mode</button>
+  </p>
+
+  <h2>What are you in the mood for?</h2>
+  <p class="swipe-help">Like it to match with the workout, skip it to see another.
+    You can also drag the card or use the ← → keys.</p>
+
+  <!-- The workout card is created by js/swipe.js -->
+  <div id="card_area"></div>
+
+  <div class="swipe-buttons">
+    <button id="skip_btn" class="swipe-btn skip" type="button">✕ Skip</button>
+    <button id="like_btn" class="swipe-btn like" type="button">♥ Like</button>
+  </div>
+
+  <h2>Your matches today</h2>
+  <ul id="matches" class="matches"></ul>
+
+  <script src="js/theme.js"></script>
+  <script src="js/swipe.js"></script>
+</body>
+</html>

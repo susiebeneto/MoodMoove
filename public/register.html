@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register · MoodMove</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+  <!-- Logo -->
+  <h1 class="logo">MoodMove</h1>
+
+  <!-- Navigation menu -->
+  <p class="menu">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="login.html">Log in</a> |
+    <a href="register.html">Register</a>
+  </p>
+
+  <!-- Dark mode toggle -->
+  <p class="theme-toggle-wrap">
+    <button id="theme_toggler" type="button">🌙 Dark mode</button>
+  </p>
+
+  <h2>Create your account</h2>
+
+  <!-- js/forms.js -->
+  <div id="message"></div>
+
+  <form id="register_form" class="form-box" action="/register" method="post">
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" required
+           minlength="3" maxlength="30" pattern="[A-Za-z0-9_]{3,30}" />
+    <p class="hint">3-30 characters: letters, numbers and underscores.</p>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required maxlength="100" />
+
+    <label for="pw">Password</label>
+    <input type="password" name="password" id="pw" required minlength="8" />
+    <p class="hint">At least 8 characters.</p>
+
+    <label for="confirm">Confirm password</label>
+    <input type="password" name="confirm" id="confirm" required minlength="8" />
+
+    <input type="submit" class="btn" value="Register" />
+  </form>
+
+  <p class="menu">Already have an account? <a href="login.html">Log in</a></p>
+
+  <script src="js/theme.js"></script>
+  <script src="js/forms.js"></script>
+</body>
+</html>
